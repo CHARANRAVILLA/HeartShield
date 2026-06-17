@@ -1,0 +1,8 @@
+firebase-service-account-key.json
+__pycache__/
+*.pyc
+venv/
+
+database.db
+uploads/
+static/profile_pics/
