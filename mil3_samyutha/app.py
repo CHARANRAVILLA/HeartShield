@@ -10,7 +10,7 @@ from flask_bcrypt import Bcrypt
 from werkzeug.utils import secure_filename
 import joblib
 import numpy as np
-import easyocr
+# import easyocr
 import docx
 import firebase_admin
 from firebase_admin import credentials, auth
@@ -53,8 +53,8 @@ except FileNotFoundError:
     print("WARNING: Model/scaler files not found.")
 
 try:
-    reader = easyocr.Reader(['en'])
-    print("EasyOCR reader initialized successfully.")
+    reader = None
+    print("OCR disabled for Render deployment.")
 except Exception as e:
     reader = None
     print(f"WARNING: EasyOCR initialization failed: {e}. OCR will be disabled.")
